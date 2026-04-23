@@ -62,14 +62,24 @@ cat ./-file07
 ```
 
 ## Level 5 -> Level 6
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `HWasnPhtq9AVKe0dmk45nxy20cvUa6EG`
+**Objective:** find file in the in here directory with size 1033 bytes human readable and not executable
+![Figure 5: Level 5 -> Level 6](/images/bandit5_6.png)
 
+```
+cd inhere/
+cd maybehere00
+cd ../
+find -readable -size 1033c (couldn't find a way to search by non executable)
+cat ./maybehere07/.file2
 ```
 
 ## Level 6 -> Level 7
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** ``
+**Objective:** 
+![Figure 5: Level 6 -> Level 7](/images/bandit6_7.png)
+
+```
 
 ```
 

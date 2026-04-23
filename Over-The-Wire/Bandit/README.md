@@ -47,8 +47,17 @@ cat ./...Hiding-From-You
 ```
 
 ## Level 4 -> Level 5
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw`
+**Objective:** find the only file that is human readable
+![Figure 4: Level 4 -> Level 5](/images/bandit4_5.png)
+```
+ls
+cd inhere/
+ls
+ls -la
+file ./-file*
+(the * is a wildcard meaning anything can be here also length doesn't matter the * can be a bunch of characters but the -file section has to match, this will give you an output of what each file is, look for the text file)
+cat ./-file07
 
 ```
 

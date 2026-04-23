@@ -8,16 +8,22 @@
 ---
 
 ## Level 0 -> Level 1
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
-
+**Password:** `ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If`
+**Objective:** Read the readme file
+![Figure 1: Level 0 -> Level 1](../images/bandit0.png)
 ```
-
+cat readme
+```
 ## Level 1 -> Level 2
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
-
+**Password:** `263JGJPfgU6LtdEvgfWU1XP5yac29mFx`
+**Objective:** read dashed file name (-)
+![Figure 1: Level 0 -> Level 1](../images/bandit1_2.png)
 ```
+cat ./-
+```
+why not cat -? "-" is treated as a flag in linux and assumes you want to add extra options to the cat program like cat -h
+for example, the "./" ensures the os knows its a path not a flag option.
+
 
 ## Level 2 -> Level 3
 **Password:** `[Insert Password Here]`

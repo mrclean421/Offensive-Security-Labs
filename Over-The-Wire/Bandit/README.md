@@ -64,6 +64,7 @@ cat ./-file07
 ## Level 5 -> Level 6
 **Password:** `HWasnPhtq9AVKe0dmk45nxy20cvUa6EG`
 **Objective:** find file in the in here directory with size 1033 bytes human readable and not executable
+
 ![Figure 5: Level 5 -> Level 6](/images/bandit5_6.png)
 
 ```

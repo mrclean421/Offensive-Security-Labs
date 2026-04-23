@@ -17,7 +17,7 @@ cat readme
 ## Level 1 -> Level 2
 **Password:** `263JGJPfgU6LtdEvgfWU1XP5yac29mFx`
 **Objective:** read dashed file name (-)
-![Figure 1: Level 0 -> Level 1](../images/bandit1_2.png)
+![Figure 2: Level 1 -> Level 2](../images/bandit1_2.png)
 ```
 cat ./-
 ```
@@ -26,15 +26,24 @@ for example, the "./" ensures the os knows its a path not a flag option.
 
 
 ## Level 2 -> Level 3
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
-
+**Password:** `MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx`
+**Objective:** read dashed and spaced file name "--spaces in this filename--"
+![Figure 3: Level 2 -> Level 3](../images/bandit2_3.png)
 ```
+cat ./--spaces\ in\ this\ filename--
+```
+why the backslash \? the backslash escapes the special meaning of the space in linux (as a seperator), the backslash tells the os that the space is not a command but part of the file's name
 
 ## Level 3 -> Level 4
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ`
+**Objective:** navigate to folder then find hidden file
+![Figure 4: Level 3 -> Level 4](../images/bandit3_4.png)
 
+```
+cd inhere
+ls 
+ls -la (to show all hidden files)
+cat ./...Hiding-From-You
 ```
 
 ## Level 4 -> Level 5

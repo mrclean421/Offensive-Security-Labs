@@ -102,7 +102,7 @@ and c in 33c stands for bytes
 ## Level 7 -> Level 8
 **Password:** `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
 **Objective:** The password for the next level is stored in the file data.txt next to the word millionth
-![Figure 5: Level 6 -> Level 7](/images/bandit7_8.png)
+![Figure 6: Level 7 -> Level 8](/images/bandit7_8.png)
 
 ```
 ls
@@ -112,20 +112,36 @@ or
 cat data.txt | grep millionth
 ```
 Either way works the | operator just pipes or feeds the output from a specific program
-or binary to the grep binary which filters through whatever you gave it plus extra filters
-if you want
+or binary to another binary usualy, in this case grep binary which filters through 
+whatever you gave it plus extra filters if you want
 
 ## Level 8 -> Level 9
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `4CKMh1JI91bUIZZPXDqGanal4xvAg0JM`
+**Objective:** The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+![Figure 7: Level 8 -> Level 9](/images/bandit8_9.png)
 
 ```
-
+ls
+cat data.txt
+sort data.txt | uniq -u
+```
+I tried uniq -u and sort -u however only after sorting the text to show all
+the duplicates only then should you pipe it "|" to uniq -u since uniq only
+works if the lines are next to each other
 ## Level 9 -> Level 10
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `FGUW5ilLVJrxX9kMYMmlN4MgbpfMiqey`
+**Objective:** The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
+![Figure 8: Level 9 -> Level 10](/images/bandit9_10.png)
 
 ```
+ls
+cat data.txt
+strings data.txt | grep =
+```
+I tried sort but strings is basically built for human readable text, you can
+use it even against binaries to find human readable well ... strings I then
+piped it into grep for the = sign (might not have been the correct metho but
+it worked)
 
 ## Level 10 -> Level 11
 **Password:** `[Insert Password Here]`

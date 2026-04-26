@@ -144,13 +144,20 @@ piped it into grep for the = sign (might not have been the correct metho but
 it worked)
 
 ## Level 10 -> Level 11
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `dtR173fZKb0RRsDFSGsg2RWnpNVj3qRr`
+**Objective:** The password for the next level is stored in the file data.txt, which contains base64 encoded data
+![Figure 9: Level 10 -> Level 11](/images/bandit10_11.png)
+
 
 ```
+ls
+cat data.txt
+cat data.txt | base64 -d
+```
+base64 is a type of encoding, the -d option is to decode
 
 ## Level 11 -> Level 12
-**Password:** `[Insert Password Here]`
+**Password:** ``
 **Objective:** ```bash
 
 ```

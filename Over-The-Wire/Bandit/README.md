@@ -101,7 +101,9 @@ and c in 33c stands for bytes
 
 ## Level 7 -> Level 8
 **Password:** `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
-**Objective:** The password for the next level is stored in the file data.txt next to the word millionth
+**Objective:** The password for the next level is stored in the file 
+data.txt next to the word millionth
+
 ![Figure 6: Level 7 -> Level 8](/images/bandit7_8.png)
 
 ```
@@ -118,6 +120,7 @@ whatever you gave it plus extra filters if you want
 ## Level 8 -> Level 9
 **Password:** `4CKMh1JI91bUIZZPXDqGanal4xvAg0JM`
 **Objective:** The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
+
 ![Figure 7: Level 8 -> Level 9](/images/bandit8_9.png)
 
 ```

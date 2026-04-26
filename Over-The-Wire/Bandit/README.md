@@ -76,13 +76,23 @@ cat ./maybehere07/.file2
 ```
 
 ## Level 6 -> Level 7
-**Password:** ``
-**Objective:** 
+**Password:** `morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj`
+**Objective:** The password for the next level is stored somewhere on the server and has all of the following properties:
+
+owned by user bandit7
+owned by group bandit6
+33 bytes in size
 ![Figure 5: Level 6 -> Level 7](/images/bandit6_7.png)
 
 ```
-
+ls
+find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
 ```
+why 2>/dev/null?
+2 is standar error output while 1 is standard output, basically telling the
+program or binary to send a error outputs like permission denied to the
+shredder a.k.a /dev/null
+and c in 33c stands for bytes
 
 ## Level 7 -> Level 8
 **Password:** `[Insert Password Here]`

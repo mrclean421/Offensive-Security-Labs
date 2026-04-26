@@ -83,22 +83,37 @@ owned by user bandit7
 owned by group bandit6
 33 bytes in size
 ![Figure 5: Level 6 -> Level 7](/images/bandit6_7.png)
+![Figure 5: Level 6 -> Level 7](/images/username_find_man.png)
+![Figure 5: Level 6 -> Level 7](/images/group_find_man.png)
+![Figure 5: Level 6 -> Level 7](/images/size_find_man.png)
+
+
 
 ```
 ls
 find / -user bandit7 -group bandit6 -size 33c 2>/dev/null
 ```
 why 2>/dev/null?
-2 is standar error output while 1 is standard output, basically telling the
-program or binary to send a error outputs like permission denied to the
+2 is standard error output while 1 is standard output, basically telling the
+program or binary to send all error outputs like permission denied to the
 shredder a.k.a /dev/null
 and c in 33c stands for bytes
 
 ## Level 7 -> Level 8
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc`
+**Objective:** The password for the next level is stored in the file data.txt next to the word millionth
+![Figure 5: Level 6 -> Level 7](/images/bandit7_8.png)
 
 ```
+ls
+cat data.txt (dont, dont make the same mistake I did please)
+grep millionth data.txt
+or
+cat data.txt | grep millionth
+```
+Either way works the | operator just pipes or feeds the output from a specific program
+or binary to the grep binary which filters through whatever you gave it plus extra filters
+if you want
 
 ## Level 8 -> Level 9
 **Password:** `[Insert Password Here]`

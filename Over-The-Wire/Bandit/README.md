@@ -160,10 +160,19 @@ cat data.txt | base64 -d
 base64 is a type of encoding, the -d option is to decode
 
 ## Level 11 -> Level 12
-**Password:** ``
-**Objective:** ```bash
+**Password:** `7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4`
+**Objective:** The password for the next level is stored in the file data.txt, 
+where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+![Figure 10: Level 11 -> Level 12](/images/bandit11_12.png)
 
 ```
+ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+Rot 13 is when the letter have been shiften by 13 letters 
+its a weak form of encryption called a ceaser cipher
+
+The 'A-Za-z' is what tr should look for and N is 'a' + 13 spaces and A is 'n' plus 13 because
+its one more than 'z' therfore it wraps around back to 'a'
 
 ## Level 12 -> Level 13
 **Password:** `[Insert Password Here]`

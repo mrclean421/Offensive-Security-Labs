@@ -161,8 +161,10 @@ base64 is a type of encoding, the -d option is to decode
 
 ## Level 11 -> Level 12
 **Password:** `7x16WNeHIi5YkIhWsfFIqoognUTyj9Q4`
+
 **Objective:** The password for the next level is stored in the file data.txt, 
 where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
 ![Figure 10: Level 11 -> Level 12](/images/bandit11_12.png)
 
 ```

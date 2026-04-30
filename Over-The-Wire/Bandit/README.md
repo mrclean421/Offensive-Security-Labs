@@ -177,10 +177,25 @@ The 'A-Za-z' is what tr should look for and N is 'a' + 13 spaces and A is 'n' pl
 its one more than 'z' therfore it wraps around back to 'a'
 
 ## Level 12 -> Level 13
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `FO5dwFsc0cbaIiH0h8J2eUks2vdTDwAn`
+
+**Objective:** The password for the next level is stored in the file data.txt, which is a hexdump of a file that has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work. Use mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and rename it using mv (read the manpages!)
+
+![Figure 11: Level 12 -> Level 13](/images/bandit12_13.png)
 
 ```
+ls
+cat data.txt
+xxd -r data.txt
+##(here you must check what the file is and rename it with the specific extension
+##.bz2 for bzip2 .gz for gunzip .tar for tar)
+file data.bin
+## then rename using mv
+mv blabla or to blabla.gz .bz2 or .tar
+## repeat until you find a ASCII text file where you will see the password
+
+```
+xxd is a binary that both makes and reverses hexdumps, we'll use it to reverse the hexdump to a binary again. Why binary? because a hexdump is usualy taken of a binary, a hexdump shows the raw bytes of the file represented in hexadecimal (base-16) each byte being represented by two digit hexadecimal numbers (00 - FF) FF being the highest hexadecimal goes to (0,1,2,3,4,5,6,7,8,9,A,B,C,D,E,F)
 
 ## Level 13 -> Level 14
 **Password:** `[Insert Password Here]`

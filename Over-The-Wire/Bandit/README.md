@@ -243,14 +243,37 @@ ssh bandit14@bandit.labs.overthewire.org -p 2220 -i sshkey.private
 ```
 
 ## Level 14 -> Level 15
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo`
+**Objective:** The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
+
+![Figure 13: Level 14 -> Level 15](/images/bandit14_15.png)
+
+```
+ls
+## look at previous objective and see the file for the curent password is only readable by our current user now
+## being 14
+cat  /etc/bandit_pass/bandit14
+## create a connection to port 30000 with netcat (nc)
+nc localhost 30000
+## paste curent level password
+MU4VWeTyJk8ROof1qqmcBPaLh7lDCPvS
 
 ```
 
 ## Level 15 -> Level 16
-**Password:** `[Insert Password Here]`
-**Objective:** ```bash
+**Password:** `kSkvUpMQ7lBYyCM4GBPvCvT1BfWRy0Dx`
+**Objective:** The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL/TLS encryption.
+
+Helpful note: Getting “DONE”, “RENEGOTIATING” or “KEYUPDATE”? Read the “CONNECTED COMMANDS” section in the manpage.
+
+![Figure 14: Level 15 -> Level 16](/images/bandit15_16.png)
+
+```
+ls
+## s_client is the easiest point and click ssl/tls client I've found
+openssl s_client -connect localhost:30001
+## paste and enter pasword
+8xCjnmgoKbGLhHFAZlGE5Tmu4M2tKJQo
 
 ```
 
